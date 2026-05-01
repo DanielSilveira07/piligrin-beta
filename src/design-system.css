@@ -1,0 +1,101 @@
+/* ========================================
+   PILIGRIN — DESIGN SYSTEM
+   ======================================== */
+
+/* ========================================
+   1. FONTES LOCAIS
+   ======================================== */
+
+/* NewBlack */
+@font-face {
+  font-family: 'NewBlack';
+  src: url('./assets/fonts/newBlack/WOFF&WOFF2/NewBlackTypeface-Light.woff2') format('woff2'),
+       url('./assets/fonts/newBlack/WOFF&WOFF2/NewBlackTypeface-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'NewBlack';
+  src: url('./assets/fonts/newBlack/WOFF&WOFF2/NewBlackTypeface-Regular.woff2') format('woff2'),
+       url('./assets/fonts/newBlack/WOFF&WOFF2/NewBlackTypeface-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'NewBlack';
+  src: url('./assets/fonts/newBlack/WOFF&WOFF2/NewBlackTypeface-Medium.woff2') format('woff2'),
+       url('./assets/fonts/newBlack/WOFF&WOFF2/NewBlackTypeface-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'NewBlack';
+  src: url('./assets/fonts/newBlack/WOFF&WOFF2/NewBlackTypeface-SemiBold.woff2') format('woff2'),
+       url('./assets/fonts/newBlack/WOFF&WOFF2/NewBlackTypeface-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'NewBlack';
+  src: url('./assets/fonts/newBlack/WOFF&WOFF2/NewBlackTypeface-Bold.woff2') format('woff2'),
+       url('./assets/fonts/newBlack/WOFF&WOFF2/NewBlackTypeface-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'NewBlack';
+  src: url('./assets/fonts/newBlack/WOFF&WOFF2/NewBlackTypeface-ExtraBold.woff2') format('woff2'),
+       url('./assets/fonts/newBlack/WOFF&WOFF2/NewBlackTypeface-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Behind The Nineties (regular + bold variants used as fallback secondary) */
+@font-face {
+  font-family: 'Behind The Nineties';
+  src: url('./assets/fonts/behind-the-nineties/WOFF&WOFF2/Behind-The-Nineties-Rg.woff2') format('woff2'),
+       url('./assets/fonts/behind-the-nineties/WOFF&WOFF2/Behind-The-Nineties-Rg.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Behind The Nineties';
+  src: url('./assets/fonts/behind-the-nineties/WOFF&WOFF2/Behind-The-Nineties-Smbd.woff2') format('woff2'),
+       url('./assets/fonts/behind-the-nineties/WOFF&WOFF2/Behind-The-Nineties-Smbd.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Behind The Nineties';
+  src: url('./assets/fonts/behind-the-nineties/WOFF&WOFF2/Behind-The-Nineties-Bd.woff2') format('woff2'),
+       url('./assets/fonts/behind-the-nineties/WOFF&WOFF2/Behind-The-Nineties-Bd.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ========================================
+   2. CSS VARIABLES — Design Tokens
+   ======================================== */
+:root {
+  /* Cores */
+  --color-black-primary:   #0D0D0D;
+  --color-white-primary:   #FFFFFF;
+  --color-white-secondary: #F2F1EB;
+  --color-red-primary:     #EA3B18;
+
+  /* Tipografia */
+  --font-primary:   'NewBlack', sans-serif;
+  --font-secondary: 'Behind The Nineties', sans-serif;
+
+  /* Tamanho base de corpo */
+  --text-body: 16px;
+}
