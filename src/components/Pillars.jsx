@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import styled, { keyframes } from "styled-components";
+import soLogoBranca from "../assets/soLogoBranca.png";
 
 const reveal = keyframes`
   from { opacity: 0; transform: translateY(32px); }
@@ -19,6 +20,17 @@ const ruleGrow = keyframes`
 const ghostFade = keyframes`
   from { opacity: 0; }
   to   { opacity: 0.055; }
+`;
+
+const logoReveal = keyframes`
+  from {
+    opacity: 0;
+    transform: perspective(500px) rotateY(-15deg) rotateZ(6deg) translateY(32px);
+  }
+  to {
+    opacity: 0.13;
+    transform: perspective(500px) rotateY(-15deg) rotateZ(6deg) translateY(0);
+  }
 `;
 
 const PILLARS = [
@@ -171,6 +183,34 @@ const Divider = styled.div`
 
   @media (max-width: 768px) { margin-bottom: 56px; }
   @media (max-width: 480px) { margin-bottom: 44px; }
+`;
+
+const DecorLogo = styled.img`
+  position: absolute;
+  right: 0px;
+  top: -32px;
+  width: clamp(160px, 30vw, 450px);
+  opacity: 0.13;
+  transform: perspective(500px) rotateY(-15deg) rotateZ(6deg);
+  filter: drop-shadow(0 0 28px rgba(234, 59, 24, 0.10));
+  mask-image: radial-gradient(
+    ellipse 80% 80% at 55% 42%,
+    black 18%,
+    rgba(0, 0, 0, 0.55) 48%,
+    transparent 74%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 80% 80% at 55% 42%,
+    black 18%,
+    rgba(0, 0, 0, 0.55) 48%,
+    transparent 74%
+  );
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  animation: ${logoReveal} 1.6s cubic-bezier(0.4, 0, 0.2, 1) 0.5s both;
+
+  @media (max-width: 768px) { display: none; }
 `;
 
 /* ─── Cards ─────────────────────────────────────────────────── */
@@ -344,6 +384,7 @@ function Pillars() {
   return (
     <Section id="pilares" ref={sectionRef}>
       <Container>
+        <DecorLogo src={soLogoBranca} alt="" />
         <Top $v={isVisible}>
           <HeadlineCol>
             <SectionLabel>O Sistema</SectionLabel>
