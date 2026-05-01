@@ -3,3 +3,48 @@
    ======================================== */
 
 @import './design-system.css';
+
+/* ========================================
+   SCROLLBAR PERSONALIZADA
+   ======================================== */
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #EA3B18 rgba(255, 255, 255, 0.04);
+}
+
+/* Webkit — Chrome, Safari, Edge */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    #EA3B18 0%,
+    #b5361a 45%,
+    #7ec47a 78%,
+    #C0F4AB 100%
+  );
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom,
+    #ff4d27 0%,
+    #EA3B18 45%,
+    #90e085 78%,
+    #d0ffba 100%
+  );
+  box-shadow: 0 0 8px rgba(234, 59, 24, 0.35);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
